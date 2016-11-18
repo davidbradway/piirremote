@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block body %}
+<div data-role="page" data-title="Control" id="control" data-add-back-btn="true">
+    <div data-role="header" data-theme="b">
+        <h1>Pi Remote Control</h1>
+        <h4>{{d.id}}</h4>
+    </div>
+
+    <div data-role="content" class="container">
+        <table class="center">
+            <tr valign="top">
+                <td>
+                    <a class="btn btn-default btn-lg" href="#" onclick="clickedOp('{{ d.id }}','KEY_POWER');">
+                        <i class="fa fa-power-off fa-fw fa-6" aria-hidden="true"></i>
+                    </a><br>
+                    <a class="btn btn-default btn-lg" href="#" onclick="clickedOp('{{ d.id }}','KEY_CYCLEWINDOWS');">
+                        <i class="fa fa-television fa-fw fa-6" aria-hidden="true"></i>
+                    </a><br>
+                    <a class="btn btn-default btn-lg" href="#" onclick="clickedOp('{{ d.id }}','KEY_ENTER');">
+                        <i class="fa fa-check fa-fw fa-6" aria-hidden="true"></i>
+                    </a><br>
+                    <a class="btn btn-default btn-lg" href="#" onclick="clickedOp('{{ d.id }}','KEY_EXIT');">
+                        <i class="fa fa-times fa-fw fa-6" aria-hidden="true"></i>
+                    </a><br>
+                </td>
+                <td>
+                    <a class="btn btn-default btn-lg" href="#" onclick="clickedOp('{{ d.id }}','KEY_VOLUMEUP');">
+                        <i class="fa fa-volume-up fa-fw fa-6" aria-hidden="true"></i>
+                    </a><br>
+                    <a class="btn btn-default btn-lg" href="#" onclick="clickedOp('{{ d.id }}','KEY_VOLUMEDOWN');">
+                        <i class="fa fa-volume-down fa-fw fa-6" aria-hidden="true"></i>
+                    </a><br>
+                    <a class="btn btn-default btn-lg" href="#" onclick="clickedOp('{{ d.id }}','KEY_MUTE');">
+                        <i class="fa fa-volume-off fa-fw fa-6" aria-hidden="true"></i>
+                    </a><br>
+                </td>
+            </tr>
+        </table>
+    </div>        
+</div>
+{% endblock %}
