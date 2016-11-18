@@ -1,0 +1,3 @@
+[submodule "web-irsend"]
+	path = web-irsend
+	url = git@github.com:slimjim777/web-irsend.git
