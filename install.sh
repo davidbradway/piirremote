@@ -1,7 +1,7 @@
 echo "piirremote"
 echo "Setup"
 echo "see: http://alexba.in/blog/2013/01/06/setting-up-lirc-on-the-raspberrypi/"
-echo "install Lirc"
+echo "install LIRC"
 
 #sudo apt-get install lirc -y
 
