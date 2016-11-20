@@ -40,5 +40,9 @@ rm .temp2
 echo "Start the socket"
 sudo lirc
 
+echo "Install pip and Flask"
+sudo apt-get install python-pip -y
+sudo pip install flask
+
 echo "Finally, reboot the Raspberry Pi"
 sudo reboot
