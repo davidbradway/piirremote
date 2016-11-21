@@ -23,6 +23,7 @@ http://raspberrypi.stackexchange.com/questions/52112/raspberry-pi-3-lirc-could-n
 ## Test IRSEND
 
 `irsend LIST "" ""`
+`irsend LIST Samsung_BN59-01041A ""`
 
 Try `irsend SEND_ONCE Samsung_BN59-01041A KEY_POWER` and if everything works properly, your TV should turn on.
 

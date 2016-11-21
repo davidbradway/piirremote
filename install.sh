@@ -6,11 +6,11 @@ echo "install LIRC"
 sudo apt-get install lirc -y
 
 # One of the websites in the README said do not do it this way anymore...
-#echo "lirc_dev
-#lirc_rpi gpio_out_pin=22" > .temp
+echo "lirc_dev
+lirc_rpi gpio_out_pin=22" > .temp
 #more .temp
-#sudo cat .temp >> /etc/modules
-#rm .temp
+sudo cat .temp >> /etc/modules
+rm .temp
 
 echo "Add the following configuration to the Lirc hardware file"
 echo "LIRCD_ARGS=\"--uinput\"
