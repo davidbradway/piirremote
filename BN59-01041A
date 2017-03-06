@@ -54,7 +54,7 @@ begin remote
           KEY_MENU                 0x58A7                    #  Was: Menu
           KEY_INFO                 0xF20D                    #  Was: Guide
           KEY_TOOLS                0xD22D                    #  Was: Tools
-          KEY_ENTER                0x1AE5                    #  Was: Return
+          KEY_RETURN               0x1AE5                    #  Was: Return
           KEY_CH_LIST              0xD629                    #  Was: Ch.list
           KEY_MEDIA_P              0x31CE                    #  Was: Media.P
           KEY_EXIT                 0xB44B                    #  Was: Exit
