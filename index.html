@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+
   <script src="https://use.fontawesome.com/1691e818bd.js"></script>
   <style type="text/css">
     .fa-6 {
@@ -18,7 +20,7 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-  <title>IR Webserver</title>
+  <title>Particle IR Webserver</title>
 </head>
 
 <body>
@@ -26,27 +28,27 @@
     <table class="center">
       <tr valign="top">
         <td>
-          <a class="btn btn-default btn-lg" href="#">
+          <a class="btn btn-default btn-lg" href="#" onclick="press('S_pwr');">
             <i class="fa fa-power-off fa-fw fa-6" aria-hidden="true"></i>
           </a><br>
-          <a class="btn btn-default btn-lg" href="#">
+          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CYCLEWINDOWS');">
             <i class="fa fa-television fa-fw fa-6" aria-hidden="true"></i>
           </a><br>
-          <a class="btn btn-default btn-lg" href="#">
+          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_ENTER');">
             <i class="fa fa-check fa-fw fa-6" aria-hidden="true"></i>
           </a><br>
-          <a class="btn btn-default btn-lg" href="#">
+          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_EXIT');">
             <i class="fa fa-times fa-fw fa-6" aria-hidden="true"></i>
           </a><br>
         </td>
         <td>
-          <a class="btn btn-default btn-lg" href="#">
+          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEUP');">
             <i class="fa fa-volume-up fa-fw fa-6" aria-hidden="true"></i>
           </a><br>
-          <a class="btn btn-default btn-lg" href="#">
+          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEDOWN');">
             <i class="fa fa-volume-down fa-fw fa-6" aria-hidden="true"></i>
           </a><br>
-          <a class="btn btn-default btn-lg" href="#">
+          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MUTE');">
             <i class="fa fa-volume-off fa-fw fa-6" aria-hidden="true"></i>
           </a><br>
         </td>
@@ -54,9 +56,37 @@
     </table>
   </div>
 
+  <script>
+    var particle = new Particle();
+    var token;
+    particle.login({ username: 'david.bradway@gmail.com', password: '' }).then(
+      function(data) {
+        token = data.body.access_token;
+        console.log('Your access token', token);
+      },
+      function (err) {
+        console.log('Could not log in.', err);
+      }
+    );
+
+    function press(argument_string) {
+      var fnPr = particle.callFunction({ deviceId: '260036000247343339373536', name: 'TVButton', argument: argument_string, auth: token });
+      fnPr.then(
+        function(data) {
+          console.log('Function called succesfully:', data);
+          return data;
+        }, function(err) {
+          console.log('An error occurred:', err);
+          return err;
+        }
+      );
+    }
+  </script>
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
+
