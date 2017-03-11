@@ -12,6 +12,22 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .centered-wrapper {
+      position: relative;
+      text-align: center;
+    }
+    .centered-wrapper:before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      width: 0; height: 100%;
+      vertical-align: middle;
+    }
+    .centered-content {
+      display: inline-block;
+      vertical-align: middle;
+    }
   </style>
 
   <!-- Latest compiled and minified CSS -->
@@ -23,37 +39,161 @@
   <title>Particle IR Webserver</title>
 </head>
 
-<body>
-  <div class="container">
-    <table class="center">
-      <tr valign="top">
-        <td>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('S_pwr');">
-            <i class="fa fa-power-off fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CYCLEWINDOWS');">
-            <i class="fa fa-television fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_ENTER');">
-            <i class="fa fa-check fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_EXIT');">
-            <i class="fa fa-times fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-        </td>
-        <td>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEUP');">
-            <i class="fa fa-volume-up fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEDOWN');">
-            <i class="fa fa-volume-down fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MUTE');">
-            <i class="fa fa-volume-off fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-        </td>
-      </tr>
-    </table>
+<body class="centered-wrapper">
+  <div class="centered-content">
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_POWER');">
+    <i class="fa fa-power-off fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CYCLEWINDOWS');">
+    <i class="fa fa-tv fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_FAVORITES');">
+    <i class="fa fa-heart fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEUP');">
+    <i class="fa fa-volume-up fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MUTE');">
+    <i class="fa fa-volume-off fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEDOWN');">
+    <i class="fa fa-volume-down fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_ENTER');">
+    <i class="fa fa-check fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('PRE_CH');">
+    <i class="fa fa-angle-double-left fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_EXIT');">
+    <i class="fa fa-times fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_1');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">1</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_2');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">2</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_3');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">3</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_4');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">4</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_5');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">5</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_6');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">6</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_7');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">7</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_8');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">8</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_9');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">9</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_DASH');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">-</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_0');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">0</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CHANNELUP');">
+    <i class="fa fa-arrow-up fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CHANNELDOWN');">
+    <i class="fa fa-arrow-down fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CH_LIST');">
+	<i class="fa fa-bars fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MENU');">
+    <i class="fa fa-cogs fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_INFO');">
+    <i class="fa fa-info fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_TOOLS');">
+    <i class="fa fa-scissors fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_UP');">
+    <i class="fa fa-caret-up fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_LEFT');">
+    <i class="fa fa-caret-left fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_RIGHT');">
+    <i class="fa fa-caret-right fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_DOWN');">
+    <i class="fa fa-caret-down fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_RETURN');">
+    <i class="fa fa-level-down fa-rotate-90 fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_SUBTITLE');">
+    <i class="fa fa-cc fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_REWIND');">
+    <i class="fa fa-backward fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_RECORD');">
+    <i class="fa fa-circle fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_STOP');">
+    <i class="fa fa-stop fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_PAUSE');">
+    <i class="fa fa-pause fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_PLAY');">
+    <i class="fa fa-play fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_FORWARD');">
+    <i class="fa fa-forward fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-danger btn-lg" href="#" onclick="press('KEY_RED');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">A</i>
+  </a>
+  <a class="btn btn-success btn-lg" href="#" onclick="press('KEY_GREEN');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">B</i>
+  </a>
+  <a class="btn btn-warning btn-lg" href="#" onclick="press('KEY_YELLOW');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">C</i>
+  </a>
+  <a class="btn btn-primary btn-lg" href="#" onclick="press('KEY_BLUE');">
+    <i class="fa fa-fw fa-6" aria-hidden="true">D</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MEDIA_P');">
+    <i class="fa fa-film fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_S_MODE');">
+    <i class="fa fa-file-sound-o fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_SLEEP');">
+    <i class="fa fa-bed fa-fw fa-6" aria-hidden="true"></i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MTS');">
+    <i class="fa fa-6" aria-hidden="true">MTS</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_TTX_MIX');">
+    <i class="fa fa-6" aria-hidden="true">TTX</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_AD');">
+    <i class="fa fa-6" aria-hidden="true">AD</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_SRS');">
+    <i class="fa fa-6" aria-hidden="true">SRS</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_P_MODE');">
+    <i class="fa fa-6" aria-hidden="true">PMODE</i>
+  </a>
+  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_P_SIZE');">
+    <i class="fa fa-6" aria-hidden="true">PSIZE</i>
+  </a>
   </div>
 
   <script>
@@ -89,4 +229,3 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
-
