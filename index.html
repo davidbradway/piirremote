@@ -1,92 +1,270 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
 
-  <script src="https://use.fontawesome.com/1691e818bd.js"></script>
-  <style type="text/css">
-    .fa-6 {
-      font-size: 10em;
-    }
-    table.center {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
+    <script src="https://use.fontawesome.com/1691e818bd.js"></script>
+    <style type="text/css">
+        .fa-6 {
+            font-size: 10em;
+        }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-  <title>Particle IR Webserver</title>
+    <title>Particle IR Webserver</title>
+
+    <style type="text/css">
+        body {
+            background: #000000; 
+            color: #fff;
+            font: 16px/1.8 sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin:0 auto;
+            max-width:1140px;
+        }
+        header {
+            width: 100%;
+            margin:0px auto;
+        }
+        h1 {
+            background: rgba(0.1,0.1,0.1,0);
+            text-align: center;
+            color:#fff;
+            font: 95px/1 "Courier";
+            text-transform: uppercase;
+            display: block;
+            margin: 5% auto 5%;
+        }
+    </style>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body>
-  <div class="container">
-    <table class="center">
-      <tr valign="top">
-        <td>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('S_pwr');">
-            <i class="fa fa-power-off fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CYCLEWINDOWS');">
-            <i class="fa fa-television fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_ENTER');">
-            <i class="fa fa-check fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_EXIT');">
-            <i class="fa fa-times fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-        </td>
-        <td>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEUP');">
-            <i class="fa fa-volume-up fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEDOWN');">
-            <i class="fa fa-volume-down fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-          <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MUTE');">
-            <i class="fa fa-volume-off fa-fw fa-6" aria-hidden="true"></i>
-          </a><br>
-        </td>
-      </tr>
-    </table>
-  </div>
+    <div class="container">
+        <header>
+            <div class="row">
+              <div class="col-xs-4">
+                  <a class="btn btn-default btn-lg" href="#" onclick="press('S_pwr');">
+                  <i class="fa fa-power-off fa-fw fa-6" aria-hidden="true"></i>
+                  </a>
+                </div>
+              <div class="col-xs-4">&nbsp;</div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="">
+                  <i class="fa fa-lightbulb-o fa-fw fa-6" aria-hidden="true"></i>
+                  </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">&nbsp;</div>
+              <div class="col-xs-4">
+                  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_CYCLEWINDOWS');">
+                    <i class="fa fa-television fa-fw fa-6" aria-hidden="true"></i>
+                  </a>
+              </div>
+              <div class="col-xs-4">&nbsp;</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_1');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">1</i>
+                  </a>
+              </div>
+              <div class="col-xs-4">
+                  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_2');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">2</i>
+                  </a>
+              </div>
+              <div class="col-xs-4">
+                  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_3');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">3</i>
+                  </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_4');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">4</i>
+                  </a>
+              </div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_5');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">5</i>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_6');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">6</i>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_7');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">7</i>
+                  </a>
+              </div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_8');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">8</i>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_9');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">9</i>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_DASH');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">-</i>
+                  </a>
+              </div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_0');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">0</i>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_PRECH');">
+                    <i class="fa fa-fw fa-6" aria-hidden="true">PR</i>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                    <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEUP');">
+                        <i class="fa fa-volume-up fa-fw fa-6" aria-hidden="true"></i>
+                    </a>
+              </div>
+              <div class="col-xs-4">
+                  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_MUTE');">
+                    <i class="fa fa-volume-off fa-fw fa-6" aria-hidden="true"></i>
+                  </a>
+              </div>
+              <div class="col-xs-4">CHN UP</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_VOLUMEDOWN');">
+                    <i class="fa fa-volume-down fa-fw fa-6" aria-hidden="true"></i>
+                </a></div>
+              <div class="col-xs-4">CHLIST</div>
+              <div class="col-xs-4">CHN DWN</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">MEDIA.P</div>
+              <div class="col-xs-4">MENU</div>
+              <div class="col-xs-4">FAV.CH</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">TOOLS</div>
+              <div class="col-xs-4">
+                <a class="btn btn-default btn-lg" href="#" onclick="press('');">
+                    <i class="fa fa-caret-up fa-fw fa-6" aria-hidden="true"></i>
+                  </a>
+              </div>
+              <div class="col-xs-4">INFO</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">◄</div>
+              <div class="col-xs-4">
+                  <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_ENTER');">
+                        <i class="fa fa-check fa-fw fa-6" aria-hidden="true"></i>
+                    </a>
+              </div>
+              <div class="col-xs-4">►</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">RETURN</div>
+              <div class="col-xs-4">▼</div>
+              <div class="col-xs-4">       
+               <a class="btn btn-default btn-lg" href="#" onclick="press('KEY_EXIT');">
+                    <i class="fa fa-times fa-fw fa-6" aria-hidden="true"></i>
+                </a></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-3">A</div>
+              <div class="col-xs-3">B</div>
+              <div class="col-xs-3">C</div>
+              <div class="col-xs-3">D</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">S.MODE</div>
+              <div class="col-xs-4">SLEEP</div>
+              <div class="col-xs-4">MTS</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">P.MODE</div>
+              <div class="col-xs-4">P.SIZE</div>
+              <div class="col-xs-4">CC</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">&lt;&lt;</div>
+              <div class="col-xs-4">||</div>
+              <div class="col-xs-4">&gt;&gt;</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">REC</div>
+              <div class="col-xs-4">►</div>
+              <div class="col-xs-4">STOP</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">&nbsp;</div>
+              <div class="col-xs-4">SAMSUNG</div>
+              <div class="col-xs-4">&nbsp;</div>
+            </div>
+        </header>
+    </div>
 
-  <script>
-    var particle = new Particle();
-    var token;
-    particle.login({ username: 'david.bradway@gmail.com', password: '' }).then(
-      function(data) {
-        token = data.body.access_token;
-        console.log('Your access token', token);
-      },
-      function (err) {
-        console.log('Could not log in.', err);
-      }
-    );
+    <script>
+        var particle = new Particle();
+        var token;
+        particle.login({ username: 'david.bradway@gmail.com', password: '' }).then(
+            function(data) {
+                token = data.body.access_token;
+                console.log('Your access token', token);
+            },
+            function (err) {
+                console.log('Could not log in.', err);
+            }
+        );
 
-    function press(argument_string) {
-      var fnPr = particle.callFunction({ deviceId: '260036000247343339373536', name: 'TVButton', argument: argument_string, auth: token });
-      fnPr.then(
-        function(data) {
-          console.log('Function called succesfully:', data);
-          return data;
-        }, function(err) {
-          console.log('An error occurred:', err);
-          return err;
+        function press(argument_string) {
+            var fnPr = particle.callFunction({ deviceId: '260036000247343339373536', name: 'TVButton', argument: argument_string, auth: token });
+            fnPr.then(
+                function(data) {
+                    console.log('Function called successfully:', data);
+                    return data;
+                }, function(err) {
+                    console.log('An error occurred:', err);
+                    return err;
+                }
+            );
         }
-      );
-    }
-  </script>
+    </script>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="jquery.fittext.js"></script>
+    <script type="text/javascript">
+        $("#fittext1").fitText();
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
 
